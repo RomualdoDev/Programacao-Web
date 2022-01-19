@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel='stylesheet' href='/stylesheets/style.css'>
+
+<head></head>
+
+<body>
+    <ul id="menu">
+        <li><a href="/">Consultar/Deletar Aeroporto</a></li>
+        <li><a href="/aeroportos">Listar Aeroportos</a></li>
+        <li><a href="/novoAero">Cadastrar Aeroporto</a></li>
+    </ul>
+    <h1> Cadastro de Aeroporto </h1>
+    <form action="/addAero" method="post">
+        <p>Aeroporto: <input type="text" name="aeroporto" /></p>
+        <p>Cidade: <input type="text" name="cidade" /></p>
+        <span><input type="submit" value="Salvar" /></span>
+    </form>
+</body>
+
+</html>

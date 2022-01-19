@@ -1,0 +1,92 @@
+body{
+    background: #dadada;
+}
+#container{
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    width: 500px;
+    height: 600px;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.4);
+    background: #ffff;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#container span{
+    margin: 10px;
+    font-size: 25px; 
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+#container p{
+    margin: 1px;
+}
+
+#menu{
+    height: 40px;
+}
+
+#menu ul {
+    padding:5px;
+    margin:5px;
+    list-style:none; 
+}
+
+#menu ul li {
+   background: #fff;
+   border: 1px solid silver ;
+   margin: 2px;
+   display: inline;
+   border-radius: 3px;
+}
+
+#menu ul li a {
+    padding: 2px 15px ;
+    display: inline-block;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+#menu ul li:hover {
+    background-color:#D6D6D6;
+    border-color: cadetblue;
+}
+
+#infos{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+}
+
+#infos p{
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 14px;
+}
+
+#about{
+    background: #fff;
+    border: solid silver 1px;
+    width: 400px;
+    height: fit-content;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+
+#about p{
+    text-align: justify;
+    text-indent: 1em;
+    padding-top: 5px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+#about p a{
+    text-decoration: none;
+    color:cadetblue;
+    font-weight: bold;
+}

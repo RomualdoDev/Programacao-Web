@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel='stylesheet' href='/stylesheets/style.css'>
+
+<head></head>
+
+<body>
+    <ul id="menu">
+        <li><a href="/">Consultar/Deletar Aeroporto</a></li>
+        <li><a href="/aeroportos">Listar Aeroportos</a></li>
+        <li><a href="/novoAero">Cadastrar Aeroporto</a></li>
+    </ul>
+    <ul>
+        <% result.forEach(function(res){ %>
+            <li>
+                <p> Aeroporto:
+                    <%= res.aeroporto %>
+                </p>
+                <p> Cidade:
+                    <%= res.cidade %>
+                </p>
+            </li>
+            <%})%>
+    </ul>
+</body>
+
+</html>

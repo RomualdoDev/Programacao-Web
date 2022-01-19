@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var vetNomes = new Array();
+        var vetAlt = new Array();
+        var nome, altura;
+        for (i = 0; i < 5; i++) {
+            nome = prompt("Digite seu nome");
+            vetNomes.push(nome);
+            altura = Number(prompt("Digite sua altura"));
+            vetAlt.push(altura);
+        }
+        var maxAlt = Math.max(...vetAlt)
+        document.write(`A pessoa mais alta é ${vetNomes[vetAlt.indexOf(maxAlt)]}, medindo ${maxAlt} metros`);
+    </script>
+</body>
+
+</html>

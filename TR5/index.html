@@ -1,0 +1,147 @@
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title> Exercício Form </title>
+</head>
+
+<body bgcolor="#c8d8f8">
+    <form id="registraUsuario">
+        <center>
+            <table cellpadding=4 cellspacing=2 border=0>
+
+                <th bgcolor="#CCCCFF" colspan=2>
+                    <font size=5>Registro de usuário</font>
+                </th>
+
+                <tr>
+                    <td valign=top>
+                        <b>Nome</b>
+                        <br>
+                        <input type="text" id="firstName" size=15>
+                    </td>
+                    <td valign=top>
+                        <b>Idade</b>
+                        <br>
+                        <input type="text" id="idade" size=15 onblur="verificaIdade()">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td valign=top colspan=2>
+                        <b>E-Mail</b>
+                        <br>
+                        <input type="text" id="email" size=20 onblur="verificaEmail()">
+                        <br>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td valign=top colspan=2>
+                        <b>Em quais linguagens você programa?</b>
+                        <br>
+                        <input type="checkbox" name="linguagens" value="Java">Java&nbsp;&nbsp;
+                        <input type="checkbox" name="linguagens" value="C++">C++&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="checkbox" name="linguagens" value="C">C<br>
+                        <input type="checkbox" name="linguagens" value="Perl">Perl&nbsp;&nbsp;
+                        <input type="checkbox" name="linguagens" value="COBOL">COBOL
+                        <input type="checkbox" name="linguagens" value="VB">VB<br>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td valign=top colspan=2>
+                        <b>Com qual freqüência poderemos notificá-lo sobre novidades?</b>
+                        <br>
+                        <input type="radio" name="notify" value="Semanalmente" checked>Semanalmente&nbsp;&nbsp;
+                        <input type="radio" name="notify" value="Mensalmente">Mensalmente&nbsp;&nbsp;
+                        <input type="radio" name="notify" value="Quinzenalmente">Quinzenalmente
+                        <br>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td align=center colspan=2>
+                        <input type="button" value="Submit" onclick="verificar();">
+                    </td>
+                </tr>
+
+            </table>
+        </center>
+    </form>
+
+    <script>
+        var s = "";
+        var idade = document.getElementById("idade");
+        var email = document.getElementById("email");
+
+        function verificaIdade() {
+            if (idade.value === "" || Number(idade.value) < 10 || Number(idade.value) > 90) {
+                alert("A idade deve ser entre 10 e 90 anos");
+                idade.value = "";
+            } else {
+                return true;
+            }
+        }
+
+        function verificaEmail() {
+            var arroba = 0;
+            for (i = 0; i < email.value.length; i++) {
+                if (email.value[i] === "@") {
+                    arroba++;
+                }
+            }
+            if (email.value === "" || arroba !== 1) {
+                alert("Email inválido!");
+                email.value = "";
+            } else {
+                return true;
+            }
+        }
+
+        function verificaCheck(boxes) {
+            s = ""
+            var checks = 0;
+            for (var i = 0; i < boxes.length; i++) {
+                if (boxes[i].checked) {
+                    checks++;
+                    s = s + boxes[i].value + " ";
+                }
+            }
+            if (checks > 3 || checks <= 0) {
+                alert("Você deve marcar no máximo 3 linguagens!");
+            } else {
+                return true;
+            }
+        }
+
+        function pegaNomeRadio(radio) {
+            s = "";
+            for (var i = 0; i < radio.length; i++) {
+                if (radio[i].checked) {
+                    s = s + radio[i].value + " ";
+                }
+            }
+            return s;
+        }
+
+        function verificar() {
+            var nome = document.getElementById("firstName").value;
+            var cb = document.forms['registraUsuario'].elements['linguagens'];
+            var rad = document.forms['registraUsuario'].elements['notify'];
+            var resIdade = verificaIdade();
+            var resEmail = verificaEmail();
+            var resCheck = verificaCheck(cb);
+
+            if (resIdade && resEmail && resCheck) {
+                alert("Olá, " + nome + "\n \n Sua idade é: " + idade.value + "\n \n Seu" +
+                    " email é: " + email.value + "\n \n Programa as linguagens: " + s +
+                    "\n \n Vamos te notificar: " + pegaNomeRadio(rad));
+            }
+        }
+    </script>
+
+</body>
+
+
+</html>

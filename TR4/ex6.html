@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var vet = new Array();
+        var number;
+        var soma = 0;
+        while (true) {
+            number = Number(prompt("Digite um numero. Para parar digite 0."));
+            if (number === 0) {
+                break;
+            } else { vet.push(number) };
+
+        }
+        for (i = 0; i < vet.length; i++) {
+            soma += vet[i];
+        }
+        document.write(`A média dos numeros digitados é ${soma / vet.length}`)
+    </script>
+</body>
+
+</html>

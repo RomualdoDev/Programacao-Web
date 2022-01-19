@@ -1,0 +1,18 @@
+body{
+    display: flex;
+    flex-direction: column;
+}
+
+input{
+    width: 300px;
+}
+
+button{
+    border-radius: 10px;
+    background-color: blue;
+    color: azure;
+}
+
+.resultado{
+    margin-top: 10px;
+}

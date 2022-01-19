@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var meses = new Array('Janeiro',
+            'Fevereiro',
+            'Março',
+            'Abril',
+            'Maio',
+            'Junho',
+            'Julho',
+            'Agosto',
+            'Setembro',
+            'Outubro',
+            'Novembro',
+            'Dezembro');
+        var data = prompt("Digite a data no formato dia/mês/ano");
+        var splitted = data.split('/');
+        document.write(`${splitted[0]} de ${meses[Number(splitted[1]) - 1]} de ${splitted[2]}`);
+    </script>
+</body>
+
+</html>

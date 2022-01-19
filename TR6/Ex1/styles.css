@@ -1,0 +1,12 @@
+table, th, td{
+    border: solid 2px;
+    border-collapse: collapse;
+}
+
+.azul{
+    background-color: blue;
+}
+
+.verde{
+    background-color: green;
+}

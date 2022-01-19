@@ -1,0 +1,135 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0; 
+    font-family: 'Courier New', Courier, monospace;
+}
+
+header, footer, article, nav{
+    padding: 1em; 
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: silver;
+    height: 20vh; 
+}
+
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10px;
+    background: silver;
+    height: 5vh;
+    font-weight: bold;
+}
+
+aside {
+    display: flex;
+    justify-content:space-between;
+    padding: 1em; 
+}
+
+
+#title{
+    padding-top: 30px;
+    font-size: 60px; 
+    font-weight: bold;
+}
+
+#main {
+    display: flex;
+    min-height: calc(100vh - 5vh); 
+}
+
+#main>article {
+    flex: 1; 
+    margin: auto;
+}
+
+#main>nav {
+    flex: 0 0 20vw;
+    background: rgb(243, 243, 243); 
+}
+
+#main>aside {
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    flex: 0 0 20vw;
+    background: rgb(243, 243, 243); 
+}
+
+#main>nav {
+    order: -1; 
+}
+
+#menu div{
+    background: silver;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#menu ul {
+    padding:5px;
+    margin:5px;
+    list-style-type: circle; 
+}
+
+#menu ul li {
+   margin: 2px;
+}
+
+#menu ul li a {
+    padding: 2px 15px ;
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+}
+
+#menu ul li:hover {
+    font-size: 20px;
+}
+
+#about p{
+    text-align: justify;
+    text-indent: 1em;
+    padding-top: 5px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+#about p.presentation::first-letter{
+    font-size: 40px;
+    font-weight: bold;
+}
+
+#about p a{
+    text-decoration: none;
+    color:cadetblue;
+    font-weight: bold;
+}
+
+#infos{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#infos p{
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 20px;
+}
+
+#scroll{
+    margin-top: 150px;
+
+}

@@ -1,0 +1,24 @@
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+#menu{
+  list-style: none;
+  text-decoration: none;
+  margin-right: 60vw;
+  background: silver;
+  border-radius: 10px;
+}
+
+#menu li{
+  display: inline;
+  padding-left: 20px;
+}
+
+a{
+  text-decoration: none;
+  color: black;
+
+}
+
+

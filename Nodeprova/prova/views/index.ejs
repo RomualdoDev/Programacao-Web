@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+
+<body>
+  <ul id="menu">
+    <li><a href="/">Consultar/Deletar Aeroporto</a></li>
+    <li><a href="/aeroportos">Listar Aeroportos</a></li>
+    <li><a href="/novoAero">Cadastrar Aeroporto</a></li>
+  </ul>
+  <h1>Procurar Aeroporto</h1>
+  <form action="/proAero" method="post">
+    <input type="text" name="aeroporto">
+    <input type="submit" value="Procurar">
+  </form>
+
+  <h1>Deletar Aeroporto</h1>
+  <form action="/delete" method="post">
+    <input type="text" name="aeroporto">
+    <input type="submit" value="Deletar">
+  </form>
+</body>
+
+</html>

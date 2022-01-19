@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel='stylesheet' href='/stylesheets/style.css'>
+
+<head></head>
+
+<body>
+    <ul id="menu">
+        <li><a href="/">Cadastrar Cliente</a></li>
+        <li><a href="/edit">Atualizar Cliente</a></li>
+        <li><a href="/del">Apagar Cliente</a></li>
+        <li><a href="/clientes">Listar Clientes</a></li>
+    </ul>
+    <h1 class="text-center title-1"> Lista de Usu&aacute;rios </h1>
+
+    <ul>
+        <% userlist.forEach(function(user){ %>
+            <li>
+                <p> ID:
+                    <%= user._id %>
+                </p>
+                <p> Nome:
+                    <%= user.nome %>
+                </p>
+                <p> CPF:
+                    <%= user.cpf %>
+                </p>
+            </li>
+            <%})%>
+    </ul>
+</body>
+
+</html>

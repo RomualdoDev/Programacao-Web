@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var dia = prompt("Digite o dia do seu nascimento");
+        var mes = prompt("Digite o mês do seu nascimento");
+        var ano = prompt("Digite o ano do seu nascimento");
+        var hora = prompt("Digite a hora do seu nascimento");
+        var minuto = prompt("Digite o minuto do seu nascimento");
+        var minhaData = new Date(ano, mes, dia, hora, minuto);
+        var now = new Date();
+        var diffMilissegundos = now - minhaData;
+        var diffSegundos = Math.trunc(diffMilissegundos / 1000);
+        var diffMinutos = Math.trunc(diffSegundos / 60);
+        var diffHoras = Math.trunc(diffMinutos / 60);
+        var diffDias = Math.trunc(diffHoras / 24);
+        var diffMeses = Math.trunc(diffDias / 30);
+        var diffAnos = Math.trunc(diffMilissegundos / 3.154e+10);
+        document.write(`Você tem ${diffAnos} anos, ${diffDias} dias, ${diffHoras} horas, ${diffMinutos} minutos e 
+                        ${diffSegundos} segundos`);
+    </script>
+</body>
+
+</html>

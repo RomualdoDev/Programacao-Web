@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var string = prompt("Digite uma string:");
+        var splitted = string.split(" ");
+        var vetTam = new Array();
+        for (i = 0; i < splitted.length; i++) {
+            vetTam[i] = splitted[i].length;
+        }
+        var maxTam = Math.max(...vetTam);
+        for (i = 0; i < splitted.length; i++) {
+            if (splitted[i].length === maxTam) {
+                document.write("A maior palavra é: " + splitted[i])
+            }
+        }
+    </script>
+
+</body>
+
+</html>

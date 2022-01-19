@@ -1,0 +1,38 @@
+span{
+    font-size: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+#head{
+    margin-bottom: 20px;
+}
+
+#zoomIn, #zoomOut{
+    width: 40px;
+    height: 40px;
+    margin: 20px;
+    max-width: 15vw;
+}
+
+#fotos{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    max-height: 100vh;
+}
+
+.padrao {
+    margin: 20px;
+    max-width: 15vw;
+}
+
+.zoom1{
+    margin: 20px;
+    max-width: 30vw;
+}
+
+.zoom2{
+    margin: 20px;
+    max-width: 60vw;
+}
